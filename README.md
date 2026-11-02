@@ -1,4 +1,4 @@
-# YottaFlex Incremental Data Ingestion 
+# Incremental Data Ingestion 
 A local Python 3.11 data engineering project that incrementally applies customer and order change events from CSV to SQLite. It demonstrates durable watermarks, safe reruns, late arrivals, tombstones, validation, quarantine, batch recovery, run metrics, reconciliation, and reproducible performance measurement.
 
 ## What It Does
@@ -206,4 +206,4 @@ evidence/                  Curated synthetic input and verification outputs
 
 **GitHub:** [veeresh442](https://github.com/veeresh442)
 
-**Repository:** [YottaFlex Incremental Data Ingestion](https://github.com/veeresh442/yottaflex-incremental-ingestion)
+**Repository:** [Incremental Data Ingestion](https://github.com/veeresh442/yottaflex-incremental-ingestion)
