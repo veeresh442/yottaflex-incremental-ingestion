@@ -1,0 +1,126 @@
+{
+  "run": {
+    "run_id": "11a4288d-12c1-4fb7-bd21-40a54ebab108",
+    "source_name": "default",
+    "source_file": "sample.csv",
+    "status": "completed",
+    "started_at": "2026-11-01T20:06:25.009797Z",
+    "completed_at": "2026-11-01T20:06:25.069431Z",
+    "error_message": null
+  },
+  "run_counts": {
+    "input_rows": 106,
+    "skipped_before_watermark": 106,
+    "extracted_after_watermark": 0,
+    "applied": 0,
+    "stale": 0,
+    "duplicates": 0,
+    "rejected": 0,
+    "unextractable_without_arrival_timestamp": 0,
+    "unprocessed_after_failure": 0,
+    "committed_batches": 0
+  },
+  "target_snapshot": {
+    "customers": {
+      "active": 3,
+      "deleted": 0
+    },
+    "orders": {
+      "active": 98,
+      "deleted": 0
+    },
+    "active_order_amount_by_currency": [
+      {
+        "currency": "USD",
+        "active_order_amount": 219096.53
+      }
+    ],
+    "customer_state_fingerprint": {
+      "row_count": 3,
+      "sha256": "6d993cdd66caab5c0ba03e8925adedda34e1194131ea5e32184a6537bcb77e60"
+    },
+    "order_state_fingerprint": {
+      "row_count": 98,
+      "sha256": "1e3bd266d3109901703065b4f15dd55a5a4c5b47cb7900c3ecf5fd83668ae660"
+    },
+    "foreign_key_violation_count": 0,
+    "foreign_key_violations": []
+  },
+  "source_target_reconciliation": {
+    "status": "passed",
+    "passed": true,
+    "source_file": "sample.csv",
+    "method": "Replay the complete appendable CSV in a temporary database and compare it with the target.",
+    "source_replay": {
+      "status": "completed",
+      "input_rows": 106,
+      "applied": 102,
+      "stale": 0,
+      "duplicates": 1,
+      "rejected": 3
+    },
+    "expected_from_source": {
+      "customers": {
+        "active": 3,
+        "deleted": 0
+      },
+      "orders": {
+        "active": 98,
+        "deleted": 0
+      },
+      "active_order_amount_by_currency": [
+        {
+          "currency": "USD",
+          "active_order_amount": 219096.53
+        }
+      ],
+      "customer_state_fingerprint": {
+        "row_count": 3,
+        "sha256": "6d993cdd66caab5c0ba03e8925adedda34e1194131ea5e32184a6537bcb77e60"
+      },
+      "order_state_fingerprint": {
+        "row_count": 98,
+        "sha256": "1e3bd266d3109901703065b4f15dd55a5a4c5b47cb7900c3ecf5fd83668ae660"
+      }
+    },
+    "actual_target": {
+      "customers": {
+        "active": 3,
+        "deleted": 0
+      },
+      "orders": {
+        "active": 98,
+        "deleted": 0
+      },
+      "active_order_amount_by_currency": [
+        {
+          "currency": "USD",
+          "active_order_amount": 219096.53
+        }
+      ],
+      "customer_state_fingerprint": {
+        "row_count": 3,
+        "sha256": "6d993cdd66caab5c0ba03e8925adedda34e1194131ea5e32184a6537bcb77e60"
+      },
+      "order_state_fingerprint": {
+        "row_count": 98,
+        "sha256": "1e3bd266d3109901703065b4f15dd55a5a4c5b47cb7900c3ecf5fd83668ae660"
+      }
+    },
+    "checks": {
+      "customer_counts_match": true,
+      "order_counts_match": true,
+      "active_order_totals_match": true,
+      "customer_rows_match": true,
+      "order_rows_match": true
+    }
+  },
+  "reconciliation": {
+    "input_rows_account_for": true,
+    "extracted_events_account_for": true,
+    "unprocessed_extracted_events": 0,
+    "target_foreign_keys_valid": true,
+    "source_target_state_matches": true,
+    "passed": true
+  }
+}
